@@ -34,7 +34,7 @@ let congratulate = function (result) {
     } else {
         cl ("Good job, you failed.");
     }
-}
+};
 
 let userInput = getUserInput();
 let computerInput = getRPS();
