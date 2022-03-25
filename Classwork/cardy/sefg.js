@@ -91,22 +91,6 @@ function selectOption(option) {
   state = Object.assign(state, option.setState);
   showTextNode(nextTextNodeId);
 }
-let human = {
-  hand: hand,
-};
-let bot1 = {
-  hand: hand,
-};
-let bot2 = {
-  hand: hand,
-};
-let bot3 = {
-  hand: hand,
-};
-let bot4 = {
-  hand: hand,
-};
-let bot1asking = bot1[0];
 const textNodes = [
   {
     id: 1,
@@ -184,74 +168,31 @@ const textNodes = [
     options: [
       {
         text: "Deal cards to the...others...as well as yourself.",
-
-        nextText: 8,
+        nextText: 7,
       },
     ],
   },
   {
     id: 7,
-    text: `The...thing...to your left goes first. He asks for ${bot1asking}`,
+    text: "You have",
     options: [
       {
-        text: "Give him the card",
-        requiredState: (currentState) => currentState.spcard,
+        text: "Proceed",
         nextText: 8,
-      },
-      {
-        text: "Lie and say,  'Go fish'",
-        requiredState: (currentState) => currentState.spcard,
-        nextText: 4,
-      },
-      {
-        text: "Say",
-
-        nextText: 10,
-      },
-      {
-        text: "Throw the blue goo at it",
-        requiredState: (currentState) => currentState.blueGoo,
-        nextText: 11,
       },
     ],
   },
   {
     id: 8,
-    text: "You have ",
+    text: "The...thing...to your left goes first. He asks for ",
     options: [
       {
-        text: "Restart",
+        text: "Give him the card",
         nextText: -1,
       },
-    ],
-  },
-  {
-    id: 9,
-    text: "You foolishly thought this monster could be slain with a single sword.",
-    options: [
       {
-        text: "Restart",
-        nextText: -1,
-      },
-    ],
-  },
-  {
-    id: 10,
-    text: "The monster laughed as you hid behind your shield and ate you.",
-    options: [
-      {
-        text: "Restart",
-        nextText: -1,
-      },
-    ],
-  },
-  {
-    id: 11,
-    text: "You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.",
-    options: [
-      {
-        text: "Congratulations. Play Again.",
-        nextText: -1,
+        text: "Lie and say,  'Go fish'",
+        nextText: 4,
       },
     ],
   },

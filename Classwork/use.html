@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .answer {
+        font-weight: bold;
+        border: 4px dashed blue;
+        padding: 20px;
+      }
+      #yesanswer {
+        border: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello</h1>
+
+    <p>Die or no?</p>
+
+    <p class="answer" id="yesanswer" if="answer='yes">Okay, ba-bye</p>
+    <p class="answer" id="noanswer" if="answer='no">
+      No? Out, now. That's <bold>not</bold> my profession.
+    </p>
+
+    <button @click="answer='yesanswer'">Please.</button>
+    <button @click="answer='noanswer'">Nah, not today.</button>
+
+    <script src="lib/jquery.js"></script>
+    <script>
+      $("#yesbutton").click(function () {
+        $("#yesanswer").show;
+        $("#noanswer").hide;
+      });
+      $("#nobutton").click(function () {
+        $("#noanswer").show;
+        $("#yesanswer").hide;
+      });
+    </script>
+  </body>
+</html>
