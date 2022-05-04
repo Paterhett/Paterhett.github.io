@@ -91,7 +91,7 @@ class Ball {
         }
       }
     }
-    if (this.x >= windowWidth - 60) {
+    if (this.x >= windowWidth - 61) {
       if (this.y >= mouseY && this.y <= mouseY + 100) {
         if (this.x > windowWidth - 40) {
           this.x = windowWidth / 2;
