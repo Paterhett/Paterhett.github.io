@@ -117,5 +117,13 @@ class S {
     textSize(32);
     text(LeftScore, windowWidth / 2 - 50, windowHeight - 50);
     text(RightScore, windowWidth / 2 + 50, windowHeight - 50);
+    if (LeftScore === 10) {
+      alert("Left Won!");
+      document.location("Paterhett.github.io/Classwork/intro.html");
+    }
+    if (RightScore === 10) {
+      alert("Right Won!");
+      document.location("Paterhett.github.io/Classwork/intro.html");
+    }
   }
 }
