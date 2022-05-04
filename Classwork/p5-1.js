@@ -5,7 +5,6 @@ var setup = function () {
 };
 var draw = function () {
   background(240);
-
   strokeWeight(0.3);
   stroke("blue");
   line(0, 52, 325, 52);
