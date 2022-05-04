@@ -72,7 +72,7 @@ class Ball {
       this.vx = -this.vx;
       LeftScore += 1;
     }
-    if (this.x + 10 <= 0) {
+    if (this.x <= 0) {
       this.vx = -this.vx;
       RightScore += 1;
     }
